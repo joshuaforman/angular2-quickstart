@@ -6,7 +6,8 @@
   System.config({
     paths: {
       // paths serve as alias
-      'npm:': 'node_modules/'
+      'npm:': 'node_modules/',
+      'app/*': './dist/*'
     },
     // map tells the System loader where to look for things
     map: {
@@ -25,7 +26,7 @@
       // other libraries
       'rxjs':                       'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-      'angular2-localstorage':      'node_modules/angular2-localstorage'
+      'angular2-cool-storage':      'npm:angular2-cool-storage'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -40,7 +41,8 @@
         main: './index.js',
         defaultExtension: 'js'
       },
-      'angular2-localstorage': {
+      'angular2-cool-storage': {
+        main: './cool-storage.js',
         defaultExtension: "js"
       }
     }
