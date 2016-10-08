@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "2.0.0",
     "@angular/router": "3.0.0",
     "@angular/upgrade": "2.0.0",
+    "angular2-cool-storage": "^1.1.0",
     "angular2-in-memory-web-api": "0.0.20",
     "angular2-localstorage": "^0.4.0",
     "bootstrap": "^3.3.6",

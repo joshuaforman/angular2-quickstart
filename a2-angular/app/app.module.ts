@@ -3,8 +3,7 @@ import { BrowserModule }  from "@angular/platform-browser";
 import { FormsModule }    from "@angular/forms";
 import { HttpModule }    from "@angular/http";
 // added for LocalStorage
-// followed instructions here: https://www.npmjs.com/package/angular2-localstorage
-import { LocalStorageService, LocalStorageSubscriber } from "angular2-localstorage/LocalStorageEmitter";
+import { CoolStorageModule } from "angular2-cool-storage";
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from "angular2-in-memory-web-api";
@@ -24,7 +23,8 @@ import { routing } from "./app.routing";
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     FormsModule,
-    routing
+    routing,
+    CoolStorageModule
   ],
   declarations: [
         AppComponent,
@@ -34,13 +34,11 @@ import { routing } from "./app.routing";
   ],
   bootstrap:    [ AppComponent ],
   providers:    [
-        HeroService,
-        LocalStorageService // added for Local Storage
+        HeroService // ,
+        // LocalStorageService // added for Local Storage
   ]
 })
 export class AppModule {
-  // added for Local Storage
-  constructor(storageService: LocalStorageService) {}
 }
 
 
